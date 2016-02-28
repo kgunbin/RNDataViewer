@@ -1,5 +1,8 @@
-export function doNothing() {
+import * as types from './types';
+
+export function select(id) {
   return {
-    type: 'DO_NOTHING'
+    type: types.TOGGLE_SELECT,
+    id: id
   }
 }

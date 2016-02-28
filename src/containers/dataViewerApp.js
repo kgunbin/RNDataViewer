@@ -5,16 +5,10 @@ import * as appActions from '../actions/activitiesActions';
 import Activities from '../components/activities';
 
 class DataViewerApp extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
-    let {state, actions} = this.props;
     return (
       <Activities
-
-        {...this.props.actions}
+        {...this.props}
       />
     );
   }
@@ -22,7 +16,8 @@ class DataViewerApp extends Component {
 
 export default connect(
   (state) => ({
-      state: state
+    activities: state.activities.data,
+    selection: state.selection
   }),
   (dispatch) => ({
     actions: bindActionCreators(appActions, dispatch)

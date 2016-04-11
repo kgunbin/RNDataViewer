@@ -21,7 +21,7 @@ let styles = StyleSheet.create({
     backgroundColor: '#F5FCFF'
   },
   selected: {
-    backgroundColor: 'blue'
+    backgroundColor: 'green'
   }
 });
 

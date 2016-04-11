@@ -1,1 +1,3 @@
-export const TOGGLE_SELECT = 'TOGGLE_SELECT';
+module.exports = {
+ TOGGLE_SELECT: 'TOGGLE_SELECT'
+};

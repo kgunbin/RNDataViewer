@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "testdbg": "node debug --harmony ./node_modules/jest-cli/bin/jest.js"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/react-native/jestSupport/preprocessor.js",
@@ -13,15 +14,12 @@
       "js"
     ],
     "unmockedModulePathPatterns": [
-      "source-map"
+      "source-map",
+      "promise"
     ],
-    "modulePathIgnorePatterns": [
-      "^<rootDir>/node_modules/.*/__tests__/",
-      "^<rootDir>/node_modules/.*/node_modules",
-      "^<rootDir>/node_modules/fbjs/lib",
-      "^<rootDir>/node_modules/react/lib",
-      "^<rootDir>/node_modules/merge",
-      "^<rootDir>/node_modules/jstransform/polyfill/Object.es6.js"
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "packager/react-packager/src/Activity/"
     ]
   },
   "dependencies": {
